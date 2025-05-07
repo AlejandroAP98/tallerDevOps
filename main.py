@@ -1,4 +1,4 @@
-from estudiantes.registro import cargar_estudiantes, ordernar_estudiantes, mostrar_tabular
+from estudiantes.registro import cargar_estudiantes, ordernar_estudiantes, mostrar_tabular, calcular_promedio
 
 def main():
     archivo = 'estudiantes.csv'
@@ -6,7 +6,9 @@ def main():
 
     estudiantes_ordenados = ordernar_estudiantes(estudiantes)
 
-    mostrar_tabular(estudiantes_ordenados)
+    promedios = calcular_promedio(estudiantes_ordenados)
+
+    mostrar_tabular(promedios)
 
 
 if __name__ == '__main__':

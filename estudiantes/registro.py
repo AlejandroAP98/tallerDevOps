@@ -30,8 +30,18 @@ def ordernar_estudiantes(estudiantes):
     estudiantes.sort(key=lambda x: x[0])
     return estudiantes
 
-def mostrar_tabular(estudiantes):
-    print(f"{'Nombre':<20} {'Nota1':<10} {'Nota2':<10} {'Nota3':<10}")
-    print("-" * 60)
+def calcular_promedio(estudiantes):
+    promedios = []
     for estudiante in estudiantes:
-        print(f"{estudiante[0]:<20} {estudiante[1]:<10} {estudiante[2]:<10} {estudiante[3]:<10}")
+        promedio = (estudiante[1] + estudiante[2] + estudiante[3]) / 3
+        promedio = round(promedio, 2)
+        promedios.append([estudiante[0], estudiante[1], estudiante[2], estudiante[3], promedio])
+    return promedios
+
+def mostrar_tabular(estudiantes):
+    print(f"{'Nombre':<20} {'Nota1':<10} {'Nota2':<10} {'Nota3':<10} {'Promedio':<10}")
+    print("-" * 62)
+    for estudiante in estudiantes:
+        print(f"{estudiante[0]:<20} {estudiante[1]:<10} {estudiante[2]:<10} {estudiante[3]:<10} {estudiante[4]:<10}")
+
+
