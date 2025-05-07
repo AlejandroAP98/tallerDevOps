@@ -12,5 +12,5 @@ jobs:
                   python-version: '3.8'
 
             - name: Ejecutar aplicación
-              run: python main.py
+              run: python src/main.py
             
