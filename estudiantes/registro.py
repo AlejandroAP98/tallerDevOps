@@ -24,3 +24,14 @@ def cargar_estudiantes(nombre_archivo):
                 print(f"Error inesperado: {e}")
 
     return estudiantes_validos
+
+
+def ordernar_estudiantes(estudiantes):
+    estudiantes.sort(key=lambda x: x[0])
+    return estudiantes
+
+def mostrar_tabular(estudiantes):
+    print(f"{'Nombre':<20} {'Nota1':<10} {'Nota2':<10} {'Nota3':<10}")
+    print("-" * 60)
+    for estudiante in estudiantes:
+        print(f"{estudiante[0]:<20} {estudiante[1]:<10} {estudiante[2]:<10} {estudiante[3]:<10}")
